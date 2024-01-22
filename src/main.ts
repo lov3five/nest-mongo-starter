@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './modules/main/app.module';
 import { setupSwagger } from './swagger';
+import 'dotenv/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -10,6 +11,6 @@ async function bootstrap() {
   setupSwagger(app);
   // Start application on port 3000
   await app.listen(3000);
-  console.log(`Application is running on: ${await app.getUrl()}`);
+  console.log(`Application is running on: ${await process.env.APP_URL}`);
 }
 bootstrap();
