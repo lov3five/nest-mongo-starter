@@ -6,7 +6,7 @@ import 'dotenv/config';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   // Set global prefix for all routes
-  app.setGlobalPrefix('api/v1');
+  app.setGlobalPrefix(`${process.env.APP_PREFIX_V1}`);
   // Setup Swagger
   setupSwagger(app);
   // Start application on port 3000
