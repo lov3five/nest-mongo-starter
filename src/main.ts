@@ -12,5 +12,6 @@ async function bootstrap() {
   // Start application on port 3000
   await app.listen(3000);
   console.log(`Application is running on: ${await process.env.APP_URL}`);
+  console.log(process.env.MONGODB_URI);
 }
 bootstrap();
