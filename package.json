@@ -2,8 +2,8 @@
   "name": "nest-mongo-starter",
   "version": "0.0.1",
   "description": "",
-  "author": "lov3five",
-  "license": "UNLICENSED",
+  "author": "Luong Tran",
+  "license": "MIT",
   "scripts": {
     "build": "nest build",
     "start": "nest start",
