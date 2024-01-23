@@ -1,7 +1,9 @@
+import 'dotenv/config';
+
 import { NestFactory } from '@nestjs/core';
+
 import { AppModule } from './modules/main/app.module';
 import { setupSwagger } from './swagger';
-import 'dotenv/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -14,4 +16,5 @@ async function bootstrap() {
   console.log(`Application is running on: ${await process.env.APP_URL}`);
   console.log(process.env.MONGODB_URI);
 }
+
 bootstrap();

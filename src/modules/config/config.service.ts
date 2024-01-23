@@ -1,9 +1,10 @@
+import * as fs from 'node:fs';
+
 import * as dotenv from 'dotenv';
-import * as fs from 'fs';
 
 export class ConfigService {
   // Define a property to hold the parsed .env file data
-  private readonly envConfig: { [key: string]: string };
+  private readonly envConfig: Record<string, string>;
 
   // Constructor to read and parse the .env file
   constructor(filePath: string) {
